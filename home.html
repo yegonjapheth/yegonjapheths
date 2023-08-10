@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Book Lending System</title>
+<style>
+div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+</style>		
+</head>
+<body>
+    <h2><u>School Library System</u></h2>
+<div>
+<!-- <img src="{{ url_for('static', filename='jf.jpg') }}"> -->
+</div>
+<br><br>
+<div>
+    <a href="/add_book">Add a Book</a>
+</div>
+    <br>
+<div>
+    <a href="/add_member">Add a Member</a>
+</div>
+    <br>
+<div>
+    <a href="/books">View All Books</a>
+</div>
+    <br>
+<div>
+    <a href="/members">List of Members</a>
+</div>
+    <br>
+<div>
+    <a href="/borrow_book">Borrow a Book</a>
+</div>
+    <br>
+<div>
+    <a href="/borrowed_books">Books Lent Out</a>
+</div>
+    <br>
+<div>
+    <a href="/return_book">Return Book</a>
+</div>
+</div>
+</body>
+</html>

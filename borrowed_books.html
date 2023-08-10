@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Borrowed Books</title>
+<style>
+table {
+	width: 100%;
+	border: 2px solid blue;
+	border-collapse: collapse;
+	background-color: lightblue;
+}
+th, td {
+	border: 1px solid blue;
+}
+</style>
+<body>
+</head>
+    <h1><u>Borrowed Books</u></h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Borrower Name</th>
+            <th>Borrow Date</th>
+            <th>Return Date</th>
+        </tr>
+        {% for book in borrowed_books %}
+        <tr>
+            <td>{{ book['title'] }}</td>
+            <td>{{ book['author'] }}</td>
+            <td>{{ book['borrower_name'] }}</td>
+            <td>{{ book['borrow_date'] }}</td>
+            <td>{{ book['return_date'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<br><br>
+<a href="/return_book">Return Book</a>
+<a href="/">Home</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Return Book</title>
+</head>
+<body>
+    <h1><u>Return Book</u></h1>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form action="/return_book" method="POST">
+        <label for="borrower_id">Enter Borrower ID:</label>
+        <input type="text" name="borrower_id" id="borrower_id" required>
+        <button type="submit">Return Book</button>
+    </form>
+<br>
+<a href="/">Home</a>
+</body>
+</html>

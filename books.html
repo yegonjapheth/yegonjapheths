@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Books</title>
+<style>
+table {
+	width: 100%;
+	border: 2px solid blue;
+	border-collapse: collapse;
+}
+th, td {
+	border: 1px solid blue;
+}
+</style>
+</head>
+<body>
+    <h1><u>Books</u></h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Type</th>
+            <th>Book Status</th>  <!-- New column -->
+        </tr>
+{% for book in books %}
+        <tr>
+            <td>{{ book['title'] }}</td>
+            <td>{{ book['author'] }}</td>
+            <td>{{ book['type'] }}</td>
+            <td>
+                {% if book_is_available(book['id']) %}
+                    Available
+                {% else %}
+                    Borrowed
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+</table>
+<br>
+<a href="/">Home</a>
+</body>
+</html>

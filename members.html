@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Members</title>
+<style>
+	table {
+		width: 100%;
+		border: 2px solid blue;
+		border-collapse: collapse;
+	}
+	th, td {
+		border: 2px solid blue;
+	}
+</style>
+</head>
+<body>
+    <h2><u>Members</u></h1>
+    <table>
+        <tr>
+            <th>S/No</th>
+            <th>Name</th>
+            <th>Grade</th>
+        </tr>
+        {% for member in members %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ member['name'] }}</td>
+            <td>{{ member['grade'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<br><br><br>
+<a href="/">Back Home</a>
+</body>
+</html>

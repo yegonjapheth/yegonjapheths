@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Add Member</title>
+</head>
+<body>
+    <h1><u>Add a Member</u></h1>
+    <form action="/add_member" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br><br><br>
+        <label for="grade">Grade/Class:</label>
+        <select id="grade" name="grade" required>
+		<option value="GRADE 1">GRADE 1</option>
+		<option value="GRADE 2">GRADE 2</option>
+		<option value="GRADE 3">GRADE 3</option>
+		<option value="GRADE 4">GRADE 4</option>
+		<option value="GRADE 5">GRADE 5</option>
+		<option value="GRADE 6">GRADE 6</option>
+		<option value="GRADE 7">GRADE 7</option>
+		<option value="CLASS 8">CLASS 8</option>
+	</select>
+        <br><br><br><br><br><br>
+        <input type="submit" value="Add Member">
+    </form>
+<br><br><br><br><br>
+<a href="/">Back Home</a>
+</body>
+</html>
