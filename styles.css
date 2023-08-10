@@ -1,0 +1,42 @@
+/* style.css */
+
+/* Form styles */
+form {
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+img {
+  width: 300px;
+  border-radius: 15px;
+  display: inline-block;
+}
+body {
+	background-color: lightgray;
+}
+h1 {
+	text-align: center;
+	color: blue;
+}
+h2 {
+	text-align: center;
+	color: red;
+}
